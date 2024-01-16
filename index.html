@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Calculadora de Préstamos</title>
+</head>
+<body>
+  <div class="calculator">
+    <h2>Calculadora de Préstamos</h2>
+    <label for="loanAmount">Monto del préstamo:</label>
+<input type="text" id="loanAmount" placeholder="Ingrese el monto" oninput="formatAmount()" required>
+
+    <label for="interestRate">Tasa de interés anual (%):</label>
+    <input type="number" id="interestRate" placeholder="Ingrese la tasa de interés" required>
+
+    <label for="loanTerm">Plazo del préstamo (meses):</label>
+    <input type="number" id="loanTerm" placeholder="Ingrese el plazo" required>
+
+    <button onclick="calculateLoan()" class="btn">Calcular</button>
+
+    <h3>Resultado</h3>
+    <p id="monthlyPayment">Cuota mensual: $0.00 COP</p>
+    <p id="totalPayment">Pago total: $0.00 COP</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
